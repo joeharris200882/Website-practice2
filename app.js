@@ -9,33 +9,40 @@ document.getElementById("button1").addEventListener("click", function () {
   let picNum1 = Math.floor(Math.random() * 2.5);
   document.getElementById("gameChoice").src = "game-" + picNum1 + ".jpg";
   p1Choice = picNum1;
-});
 
-document.getElementById("button1").addEventListener("click", function () {
   let picNum2 = Math.floor(Math.random() * 2.5);
   p2Choice = picNum2;
 
   document.getElementById("gameChoice2").src = "game-" + picNum2 + ".jpg";
+
+  //2. Win conditions/add to score counters
+
+  let Rock = 0;
+  let Paper = 1;
+  let Scissors = 2;
+
+  if (
+    (picNum1 == Rock && picNum2 == Scissors) ||
+    (picNum1 == Scissors && picNum2 == paper) ||
+    (picNum1 == Paper && picNum2 == Rock)
+  ) {
+    p1Score += 1;
+  } else if (
+    (picNum2 == Rock && picNum1 == Scissors) ||
+    (picNum2 == Scissors && picNum1 == paper) ||
+    (picNum2 == Paper && picNum1 == Rock)
+  ) {
+    p2Score += 1;
+  } else if (picNum1 === picNum2) {
+  }
+  document.getElementById("p1Scr").innerHTML = "Player 1 Score:" + p1Score;
+  document.getElementById("p2Scr").innerHTML = "Player 2 Score:" + p2Score;
+
+
+  //3. First Player to 5 wins is the champ!
+
+  if (p)
 });
-
-document.getElementById("p1Scr").innerHTML = "Player 1 Score:" + p1Score;
-document.getElementById("p2Scr").innerHTML = "Player 2 Score:" + p2Score;
-
-console.log(p1Score);
-
-//2. Images appear,
-
-//a)if 0:2 - Rock wins
-//b)if 0:1 - Paper wins
-//c)if 1:2 - Scissors wins
-//d)if 2:2 - Draw, if 1:1 - Draw, if 1:1 - Draw
-
-//3. Depending on who wins, that Players score counter goes up
-//4. First Score Counter to reach x  winner!
-
-//models for what work
-
-//document.querySelector(".dice").style.display = "none";
 
 //1. This Works
 //document.getElementById("button1").addEventListener("click", function () {
