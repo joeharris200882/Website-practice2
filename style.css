@@ -73,7 +73,7 @@ nav {
   height: 100;
   margin: 50px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 8px solid black;
 }
 
 #button2 {
@@ -85,7 +85,8 @@ nav {
   height: 100;
   margin: 50px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 8px solid black;
+  text-shadow: black;
 }
 
 #gameChoice {
