@@ -48,7 +48,7 @@ document.getElementById("button1").addEventListener("click", function () {
   } else {
   }
 
-  if ((winCond = true)) {
+  /* if ((winCond = true)) {
     let restart = prompt("Please enter yes to restart, or no to end");
     if ((prompt = "yes" || "yes")) {
       p1Score = 0 && p2Score == 0;
@@ -58,6 +58,7 @@ document.getElementById("button1").addEventListener("click", function () {
       p2Score = "--";
     }
   }
+  */
 });
 
 //3. First Player to 5 wins is the champ!
